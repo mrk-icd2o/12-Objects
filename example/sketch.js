@@ -22,6 +22,7 @@ let forest = [];
 function setup() {
   createCanvas(600, 600);
   textSize(16);
+  
 
   // ----- Getting, changing and adding values -----
   console.log(marks['Billy']);   // 85
@@ -59,8 +60,10 @@ function draw() {
   fill(0);
   text(`Marks (${Object.keys(marks).length} students):`, 20, 30);
   let y = 55;
+
+
   for (let name in marks) {
-    text(`${name}: ${marks[name]}`, 20, y);
+    text(`${name} is getting a grade of ${marks[name]}%`, 20, y);
     y += 22;
   }
 
